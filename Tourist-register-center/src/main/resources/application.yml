@@ -6,6 +6,7 @@ eureka:
   client:
     #是否将自己注册到Eureka Server，默认为true,由于当前应用就是Eureka,所以设置成false
     register-with-eureka: false
+    #表示是否从Eueka Server获取注册信息，默认为true,由于当前是单节点的Eureka Server,没有其他Eureka Server ,故而设置为false
     fetch-registry: false
     service-url:
       defaultZone: http://localhost:8080/eureka/
