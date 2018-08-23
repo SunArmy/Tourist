@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: utf-8
+
+
+spring:
+  application:
+    name: Tourist-user-server
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://vpn.sjtest.top:8080/eureka/
+  instance:
+    prefer-ip-address: true

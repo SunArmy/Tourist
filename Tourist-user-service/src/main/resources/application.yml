@@ -1,17 +1,14 @@
-server:
-  port: 8081
-  tomcat:
-    uri-encoding: utf-8
-
-
 spring:
-  application:
-    name: Tourist-user-server
+  profiles:
+    active: dev
 
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8080/eureka/
-  instance:
-    prefer-ip-address: true
+#Mysql属性配置文件,Spring-boot系统配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tourist?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
