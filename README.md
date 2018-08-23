@@ -3,4 +3,5 @@
 JDK 1.8
 
 
-Tourist : 注册中心
+Tourist-register-center : 注册中心
+Tourist-user-service : 注册中心
