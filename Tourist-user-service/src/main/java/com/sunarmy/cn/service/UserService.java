@@ -8,4 +8,6 @@ import org.springframework.stereotype.Service;
  */
 public interface UserService {
     User insertUser(User user);
+    User findByUsername(String username);
+    User findByUsernameAndPassword(String username,String password);
 }

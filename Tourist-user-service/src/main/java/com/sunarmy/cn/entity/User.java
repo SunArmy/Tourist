@@ -25,16 +25,42 @@ public class User {
      */
     @Column(name = "username")
     String username;
+
     /**
      * 密码
      */
     @Column(name = "password")
     String password;
+
+    /**
+     * 盐
+     */
+    @Column(name = "salt")
+    String salt;
+
+    /**
+     * Token
+     */
+    @Column(name = "token")
+    String token;
     /**
      * 手机号
      */
     @Column(name = "mobile",length = 11)
     Long mobile;
+
+    /**
+     * 创建时间
+     * @return
+     */
+    @Column(name = "create_date")
+    Long createdate;
+
+    /**
+     * 最后修改时间
+     */
+    @Column(name = "last_modified_time")
+    Long lastmodifiedtime;
 
     public String getId() {
         return id;
@@ -60,11 +86,43 @@ public class User {
         this.password = password;
     }
 
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
     public Long getMobile() {
         return mobile;
     }
 
     public void setMobile(Long mobile) {
         this.mobile = mobile;
+    }
+
+    public Long getCreatedate() {
+        return createdate;
+    }
+
+    public void setCreatedate(Long createdate) {
+        this.createdate = createdate;
+    }
+
+    public Long getLastmodifiedtime() {
+        return lastmodifiedtime;
+    }
+
+    public void setLastmodifiedtime(Long lastmodifiedtime) {
+        this.lastmodifiedtime = lastmodifiedtime;
     }
 }
